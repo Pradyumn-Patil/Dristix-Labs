@@ -55,14 +55,14 @@ export default function PhysicsLogo({
     const halfWall = wallThickness / 2;
 
     // Create walls (static bodies)
-    const wallOptions: Matter.IBodyDefinition = {
+    const wallOptions = {
       isStatic: true,
       render: {
         fillStyle: "#1a1a1a",
       },
       friction: 0.8,
       restitution: 0.2,
-    };
+    } as const;
 
     const topWall = Bodies.rectangle(
       centerX,
