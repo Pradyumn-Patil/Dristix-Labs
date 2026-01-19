@@ -1,0 +1,8 @@
+<svg width="280" height="60" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo mark -->
+  <rect x="4" y="4" width="40" height="40" stroke="#1a1a1a" stroke-width="3" fill="none"/>
+  <rect x="32" y="32" width="14" height="14" fill="#3caceb"/>
+
+  <!-- Wordmark: DRISTIX -->
+  <text x="68" y="35" font-family="monospace" font-size="14" font-weight="500" letter-spacing="3" fill="#1a1a1a">DRISTIX LABS</text>
+</svg>

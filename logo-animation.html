@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dristix Logo Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        svg {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* 
+           Original Blue Square Position: x=32, y=32 
+           Large Square: x=4, y=4, width=40, height=40
+           Blue Square: width=14, height=14
+
+           Target Offsets relative to (32,32):
+           Top-Left Inner: (4,4) => dx = 4-32 = -28, dy = 4-32 = -28
+           Top-Right Inner: (30,4) => dx = 30-32 = -2, dy = -28
+           
+           Mid-Left Inner (approx): (4, 17) => dx = -28, dy = 17-32 = -15
+           Mid-Right Inner: (30, 17) => dx = -2, dy = -15
+           
+           Bottom-Left Inner: (4, 30) => dx = -28, dy = 30-32 = -2
+           Bottom-Right Inner: (30, 30) => dx = -2, dy = -2
+        */
+
+        .kernel {
+            animation: cnn-scan 4s linear infinite;
+        }
+
+        @keyframes cnn-scan {
+            /* Row 1 */
+            0% { transform: translate(-28px, -28px); }
+            25% { transform: translate(-2px, -28px); }
+            
+            /* Jump to Row 2 */
+            25.01% { transform: translate(-28px, -15px); }
+            50% { transform: translate(-2px, -15px); }
+            
+            /* Jump to Row 3 */
+            50.01% { transform: translate(-28px, -2px); }
+            75% { transform: translate(-2px, -2px); }
+
+            /* Pause/Reset or Hold */
+            75.01% { transform: translate(-28px, -28px); opacity: 0; }
+            80% { opacity: 1; }
+            100% { transform: translate(-28px, -28px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <svg width="280" height="60" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Logo mark -->
+      <rect x="4" y="4" width="40" height="40" stroke="#1a1a1a" stroke-width="3" fill="none"/>
+      <!-- Added class 'kernel' to the blue square -->
+      <rect id="blue-square" class="kernel" x="32" y="32" width="14" height="14" fill="#3caceb"/>
+    
+      <!-- Wordmark: DRISTIX -->
+      <text x="68" y="35" font-family="monospace" font-size="14" font-weight="500" letter-spacing="3" fill="#1a1a1a">DRISTIX LABS</text>
+    </svg>
+
+</body>
+</html>
