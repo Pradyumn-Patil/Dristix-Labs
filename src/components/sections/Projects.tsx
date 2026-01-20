@@ -13,6 +13,7 @@ const projects = [
     tags: ["Python", "TensorFlow", "Computer Vision", "React"],
     color: "#3caceb",
     image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=450&fit=crop",
+    link: "https://aim.io",
   },
   {
     title: "FinFlow Dashboard",
@@ -79,8 +80,22 @@ export default function Projects() {
             {/* Content */}
             <div className={index % 2 === 1 ? "md:order-1" : ""}>
               <h3 className="font-mono text-2xl md:text-3xl font-bold text-primary mb-4 flex items-center gap-2">
-                {project.title}
-                <ArrowUpRight className="w-6 h-6 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors inline-flex items-center gap-2"
+                  >
+                    {project.title}
+                    <ArrowUpRight className="w-6 h-6 text-accent" />
+                  </a>
+                ) : (
+                  <>
+                    {project.title}
+                    <ArrowUpRight className="w-6 h-6 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </>
+                )}
               </h3>
 
               <p className="text-primary/70 leading-relaxed mb-6">
