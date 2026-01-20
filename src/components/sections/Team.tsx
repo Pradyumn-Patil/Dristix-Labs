@@ -13,7 +13,7 @@ const team = [
   },
   {
     name: "Jude Mingay",
-    role: "Partner Consultant",
+    role: "Partner",
     initials: "JM",
     image: "/team/jude-mingay.png",
   },
