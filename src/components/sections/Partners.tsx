@@ -6,11 +6,10 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const partners = [
   {
-    name: "Partner Name",
-    logo: "/partners/partner-logo.svg",
-    description: "Brief description of partnership",
+    name: "Jude Mingay",
+    logo: "/team/jude-mingay.png",
+    description: "Expert development partner providing strategic guidance and technical expertise when needed",
   },
-  // Add more partners as needed
 ];
 
 export default function Partners() {
@@ -24,11 +23,14 @@ export default function Partners() {
         className="mb-16"
       >
         <p className="font-mono text-sm uppercase tracking-widest text-accent mb-4">
-          Collaborations
+          Development Partners
         </p>
-        <h2 className="font-mono text-4xl md:text-5xl font-bold text-primary">
+        <h2 className="font-mono text-4xl md:text-5xl font-bold text-primary mb-4">
           Our Partners
         </h2>
+        <p className="text-lg text-primary/70 max-w-2xl">
+          Industry experts who provide necessary guidance and support for our projects
+        </p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

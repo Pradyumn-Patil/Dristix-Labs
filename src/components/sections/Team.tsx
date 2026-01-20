@@ -12,12 +12,6 @@ const team = [
     image: "/team/pradyumn-patil.jpg",
   },
   {
-    name: "Jude Mingay",
-    role: "Partner",
-    initials: "JM",
-    image: "/team/jude-mingay.png",
-  },
-  {
     name: "Aditya Patil",
     role: "Software Engineer",
     initials: "AP",
